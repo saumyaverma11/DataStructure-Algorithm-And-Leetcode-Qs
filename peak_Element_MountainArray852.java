@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class peak_Element_MountainArray1 {
+public class peak_Element_MountainArray852 {
         public static int peakIndexInMountainArray(int arr[]) {
             int i=0;
             while(arr[i]<arr[i+1]){

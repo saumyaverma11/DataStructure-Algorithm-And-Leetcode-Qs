@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class peak_element2 {
+public class peak_element162 {
         public static int findPeakElement(int nums[]) {
             int n=nums.length;
             int low=0;
