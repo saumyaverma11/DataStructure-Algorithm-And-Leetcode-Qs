@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class minimumInSortedRotatedArray{
+public class minimumInSortedRotatedArray153{
    
         public static int findMin(int[] nums) {
             int n= nums.length;
