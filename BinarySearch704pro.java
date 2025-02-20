@@ -1,5 +1,7 @@
 import java.util.*;
-public class BinarySearch {
+
+
+public class BinarySearch704pro{
   public static int search(int[] nums, int target) {
     int n = nums.length;
     int low=0;
@@ -17,7 +19,9 @@ public class BinarySearch {
         }
     }
     return -1;
-}
+  }
+
+
   public static void main(String[] args) {
     int nums[]={-1,0,3,5,9,12};
     int target = 9;
@@ -26,3 +30,4 @@ public class BinarySearch {
     System.out.println("index is: " + result);
   }
 }
+
