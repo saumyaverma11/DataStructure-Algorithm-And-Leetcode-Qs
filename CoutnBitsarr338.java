@@ -2,17 +2,11 @@ import java.util.*;
 public class CoutnBitsarr338 {
 
     public static int[] countBits(int n, int arr[]) {
-      
-      // int arr[]= new int[n+1];
-
-      for(int i=0;i<n;i++){
-              arr[i]= arr[1/2] + (i%2);
+        int nums[] = new int[n+1];
+      for(int i=1;i<=n;i++){
+              nums[i]= nums[i/2] + (i%2);
       }
-
-        // for(int i=0;i<n+1;i++){
-        //   System.out.println(arr[i]);
-        // }
-        return arr;
+        return nums;
     }
 
 
@@ -21,9 +15,7 @@ public class CoutnBitsarr338 {
     System.out.println("jeele");
     int arr[]= new int[n+1];
     int[] result = countBits(n,arr);
-    // for(int i=0;i<n+1;i++){
-    //   System.out.print(arr[i]+" ");
-    // }
+    
     System.out.println(Arrays.toString(result));
   }
 }
