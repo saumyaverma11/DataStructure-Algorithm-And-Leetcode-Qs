@@ -1,5 +1,5 @@
 import java.util.*;
-
+//yes
 public class countNumberCompleteComponents2685 {
     
     
