@@ -1,5 +1,5 @@
 public class divideArrayEqualPairs2206 {
-    public static boolean divideArray(int[] nums) {
+    public static boolean divideArrayNaive(int[] nums) {
         int n = nums.length;
         int result =0;
         boolean arr[] = new boolean[nums.length];
@@ -26,9 +26,25 @@ public class divideArrayEqualPairs2206 {
         }
        return false; 
     }
+//using hash
+
+    public static boolean divideArrayefficient(int [] nums){
+        int hash[] = new int[501];
+        for(int i  =0;i<nums.length;i++){
+            hash[nums[i]]++;
+        }
+        for(int i=0;i<nums.length;i++){
+            if(hash[nums[i]]%2==1){
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String[] args) {
         int arr[]= {3,2,3,2,2,2};
-        boolean res = divideArray(arr);
+        boolean res = divideArrayNaive(arr);
         System.out.println(res);
+        boolean res2 = divideArrayefficient(arr);
+        System.out.println(res2);
     }
 }
