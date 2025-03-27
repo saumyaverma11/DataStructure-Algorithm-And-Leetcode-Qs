@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 public class MiniMumIndexOfAValidSpilit2780 {
-        public int minimumIndex(List<Integer> nums) {
+        public static int minimumIndex(List<Integer> nums) {
             int n = nums.size();
 
         // Step 1: Find the dominant element
@@ -50,8 +50,9 @@ public class MiniMumIndexOfAValidSpilit2780 {
         }
 
     public static void main(String[] args) {
-        List<Integer> al= new List<>();
-        al.add(1);
+        List<Integer> al = List.of(1,2,2,2);
+        int res = minimumIndex(al);
+        System.out.println(res);
 
     }
 }
