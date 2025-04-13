@@ -8,7 +8,6 @@ string freq2nd(string s){
     for(int i =0;i<n;i++){
         hash[s[i]]++;
     }
-    
     while(str.length()<s.length()){
         int max=0;
         int maxIdx=0;
