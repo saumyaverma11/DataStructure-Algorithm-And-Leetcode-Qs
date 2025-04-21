@@ -20,9 +20,28 @@ public class findFirstPalindromicStringInTheArray2108 {
         }
         return "";
     }
+    
+    public static String Palindrom2ndMethod(String[] words) {
+        String str = String.join(",",words);
+    int start =0;
+    for(int i =0; i<=str.length();i++){
+        if(i== str.length() || str.charAt(i) ==','){
+            String s = str.substring(start,i);
+        
+                if(palindrome(s)==true){
+              return s;
+                 }
+            start =i+1;
+        }
+
+    }
+    return "";
+    }
     public static void main(String[] args) {
         String words[] = {"abc","car","ada","racecar","cool"};
         String res = firstPalindrome(words);
         System.out.println(res);
+        String res2 = Palindrom2ndMethod(words);
+        System.out.println(res2);
     }
 }
