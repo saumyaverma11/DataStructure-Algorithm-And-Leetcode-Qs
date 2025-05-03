@@ -1,6 +1,6 @@
 import java.util.*;
 public class longestSubstringWithoutRepeatingCharacter3{
-    public static int lengthOfLongestSubstring(String str){
+    public static int lengthOfLongestSubstringArrayList(String str){
         int n = str.length();
         int left=0;
         int right=0;
@@ -21,9 +21,54 @@ public class longestSubstringWithoutRepeatingCharacter3{
        return maxL;
         }
     
+        public static int lengthOfLongestSubstringStringBuilder(String str){
+            int n = str.length();
+            int left=0;
+            int right=0;
+            int maxL =0;
+            StringBuilder sb = new StringBuilder();
+            while(right<n){
+                char ch = str.charAt(right);
+                if(!sb.toString().contains(String.valueOf(ch))){
+                    sb.append(ch);
+                    right++;
+                    maxL= Math.max(maxL,sb.length());
+                }
+                else{
+                    sb.deleteCharAt(0);
+                    left++;
+                }
+            }
+            return maxL;
+        }
+
+        public static int lengthOfLongestSubstringHashSet(String str){
+            int n = str.length();
+            HashSet<Character> hs = new HashSet<>();
+            int left =0;
+            int right=0;
+            int maxM=0;
+            while(right<n){
+                char ch = str.charAt(right);
+                if(!hs.contains(ch)){
+                    hs.add(ch);
+                    maxM= Math.max(maxM, right -left+1);
+                    right++;
+                }
+                else{
+                    hs.remove(str.charAt(left));
+                    left++;
+                }
+            }
+            return maxM;
+        }
     public static void main(String[] args) {
         String str = "abcabcabc";
-        int res  = lengthOfLongestSubstring(str);
+        int res  = lengthOfLongestSubstringArrayList(str);
         System.out.println(res);
+        int res2  = lengthOfLongestSubstringStringBuilder(str);
+        System.out.println(res2);
+        int res3  = lengthOfLongestSubstringHashSet(str);
+        System.out.println(res3);
     }
 }
