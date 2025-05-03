@@ -52,7 +52,7 @@ public class longestSubstringWithoutRepeatingCharacter3{
                 char ch = str.charAt(right);
                 if(!hs.contains(ch)){
                     hs.add(ch);
-                    maxM= Math.max(maxM, right -left+1);
+                    maxM= Math.max(maxM, hs.size());
                     right++;
                 }
                 else{
