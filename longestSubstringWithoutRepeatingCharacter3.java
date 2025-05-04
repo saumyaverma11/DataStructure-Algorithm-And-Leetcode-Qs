@@ -17,7 +17,6 @@ public class longestSubstringWithoutRepeatingCharacter3{
                 left++;
             }
            }
-            System.out.println(list.toString());
             return maxL;
         }
     
@@ -39,7 +38,6 @@ public class longestSubstringWithoutRepeatingCharacter3{
                     left++;
                 }
             }
-            System.out.println(sb.toString());
             return maxL;
 
         }
@@ -47,6 +45,7 @@ public class longestSubstringWithoutRepeatingCharacter3{
         public static int lengthOfLongestSubstringHashSet(String str){
             int n = str.length();
             HashSet<Character> hs = new HashSet<>();
+            HashSet<Character> hs2 = new HashSet<>();
             int left =0;
             int right=0;
             int maxM=0;
@@ -54,6 +53,7 @@ public class longestSubstringWithoutRepeatingCharacter3{
                 char ch = str.charAt(right);
                 if(!hs.contains(ch)){
                     hs.add(ch);
+                    hs2.add(ch);
                     maxM= Math.max(maxM, hs.size());
                     right++;
                 }
@@ -62,12 +62,14 @@ public class longestSubstringWithoutRepeatingCharacter3{
                     left++;
                 }
             }
-            System.out.println(hs.toString());
+            System.out.println(hs2.toString());
+            String longest = str.substring(0, left + maxM);
+            System.out.println("Longest substring without repeating characters: " + longest);
             return maxM;
 
         }
     public static void main(String[] args) {
-        String str = "abcabcabc";
+        String str = "abcabcbb";
         int res  = lengthOfLongestSubstringArrayList(str);
         System.out.println(res);
         int res2  = lengthOfLongestSubstringStringBuilder(str);
