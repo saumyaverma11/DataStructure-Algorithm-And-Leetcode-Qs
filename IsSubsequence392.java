@@ -23,7 +23,7 @@ public class IsSubsequence392 {
             }
             return (j==m);
         }
-    }
+    
     public static void main(String[] args) {
         String str = "abc";
         String str2 = "ahdgbc";
