@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BaseballGame682 {
     public static int calPoints(String[] operations) {
         int[] record = new int[operations.length];
