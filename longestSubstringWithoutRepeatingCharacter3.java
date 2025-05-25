@@ -74,6 +74,10 @@ public class longestSubstringWithoutRepeatingCharacter3{
         System.out.println(res);
         int res2  = lengthOfLongestSubstringStringBuilder(str);
         System.out.println(res2);
+
+
+
+        System.out.println("yes");
         int res3  = lengthOfLongestSubstringHashSet(str);
         System.out.println(res3);
     }
