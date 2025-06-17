@@ -11,6 +11,9 @@ public class shortestDistancetoaCharacter821 {
             res[i] = i - prev;
         }
 
+
+
+        
         // Right to Left pass
         prev = Integer.MAX_VALUE / 2;
         for (int i = n - 1; i >= 0; i--) {
