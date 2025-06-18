@@ -18,6 +18,12 @@ public class longestSubstringWithoutRepeatingCharacter3{
             }
            }
             return maxL;
+
+
+
+
+
+            
         }
     
         public static int lengthOfLongestSubstringStringBuilder(String str){
