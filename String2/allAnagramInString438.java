@@ -3,7 +3,7 @@ import java.util.List;
 
 public class allAnagramInString438 {
     public static boolean IsCompare(int hash1[], int hash2[]){
-        int i;;
+        int i;
         for( i=0;i<256;i++){
             if(hash1[i]!=hash2[i]){
                return false;
