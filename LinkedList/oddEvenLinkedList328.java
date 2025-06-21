@@ -1,3 +1,17 @@
+// Both head and tail point to the same first node.
+
+// Then, each time you do:
+
+// tail.next = newNode;
+// tail = tail.next;
+// You're extending the chain starting from head.
+
+// head still points to the first node, and from there you can traverse the full list using .next.
+
+// head is never changed — it remains pointing to the beginning of the list.
+// tail moves to the end and adds nodes, linking them via .next.
+
+
 import java.util.*;
 
 class Node{
