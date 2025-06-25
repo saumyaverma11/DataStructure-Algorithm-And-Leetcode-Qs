@@ -7,7 +7,6 @@ public class SubArraySumEqualsK560 {
     
     
             HashMap<Integer, Integer> map = new  HashMap<>();
-            int count=0;
             int sum =0;
             int ans =0;
             map.put(0,1);
