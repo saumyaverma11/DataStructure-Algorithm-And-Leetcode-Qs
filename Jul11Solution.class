@@ -1,0 +1,48 @@
+class Solution {
+    public int mostBooked(int n, int[][] meetings) {
+        Arrays.sort(meetings, (a, b) -> Integer.compare(a[0], b[0]));
+
+        PriorityQueue<Integer> availableRooms = new PriorityQueue<>();
+        for (int i = 0; i < n; i++) availableRooms.offer(i);
+
+        PriorityQueue<long[]> ongoingMeetings = new PriorityQueue<>(
+            (a, b) -> {
+                if (a[0] != b[0]) return Long.compare(a[0], b[0]);
+                return Integer.compare((int) a[1], (int) b[1]);
+            }
+        );
+
+        int[] meetCount = new int[n];
+
+        for (int[] meet : meetings) {
+            long start = meet[0], end = meet[1];
+            long duration = end - start;
+
+            while (!ongoingMeetings.isEmpty() && ongoingMeetings.peek()[0] <= start) {
+                long[] finished = ongoingMeetings.poll();
+                availableRooms.offer((int) finished[1]);
+            }
+
+            if (!availableRooms.isEmpty()) {
+                int room = availableRooms.poll();
+                ongoingMeetings.offer(new long[]{end, room});
+                meetCount[room]++;
+            } else {
+                long[] earliest = ongoingMeetings.poll();
+                long newEnd = earliest[0] + duration;
+                int room = (int) earliest[1];
+                ongoingMeetings.offer(new long[]{newEnd, room});
+                meetCount[room]++;
+            }
+        }
+
+        int resultRoom = 0, maxMeetings = 0;
+        for (int i = 0; i < n; i++) {
+            if (meetCount[i] > maxMeetings) {
+                maxMeetings = meetCount[i];
+                resultRoom = i;
+            }
+        }
+        return resultRoom;
+    }
+}
