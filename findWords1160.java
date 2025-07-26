@@ -24,7 +24,7 @@ public class findWords1160{
             }
 
             if (canForm) {
-                totalLength += word.length();
+                totalLength += word.l77ength();
             }
         }
         
