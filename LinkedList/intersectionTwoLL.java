@@ -12,6 +12,8 @@ class Node{
 
 
 public class intersectionTwoLL {
+
+    
     public static Node getIntersectionNode(Node head1, Node head2){
         HashSet<Node> set = new HashSet<>();
         while(head1 != null){
