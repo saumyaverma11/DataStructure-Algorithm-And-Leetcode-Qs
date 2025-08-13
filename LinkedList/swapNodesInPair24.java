@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class swapNodesInPair24 {
      public static ListNode swapPairs(ListNode head) {
-        int k=2;
         int count=0;
         ListNode curr= head;
         ListNode next=null;

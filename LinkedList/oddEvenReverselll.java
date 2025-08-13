@@ -48,8 +48,9 @@ public class oddEvenReverselll {
             curr= next;
         }
 
-        evenList.next = prev; // link the odd list to the reversed even list
-        return evenList.next; // return the new head of the list
+        return prev;
+        // evenList.next = prev; // link the odd list to the reversed even list
+        // return evenList.next; // return the new head of the list
     }
 
 
