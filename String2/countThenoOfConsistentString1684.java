@@ -17,8 +17,7 @@ public class countThenoOfConsistentString1684 {
                 }
             }
         return count;
-    }
-    public static void main(String[] args) {
+    }     public static void main(String[] args) {
         String allowed = "ab";
         String words[] = {"ad","bd","aaab","baa","badab"};
         int res = countConsistentStrings(allowed,words);

@@ -8,6 +8,7 @@ public class anagramSearch{
             hash[txt.charAt(i+j)]--;
         }
         for(int j =0;j<256;j++){
+            
             if(hash[j]!=0){
                 return false;
             }
